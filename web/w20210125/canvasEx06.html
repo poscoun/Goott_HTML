@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>그라데이션 - 원</title>
+	<script type="text/javascript">
+		window.onload = function(){
+			var canvas = document.getElementById("c");
+
+			var ctx = canvas.getContext('2d');
+											// x1, y1, r1, x2, y2, r2
+			var rgrad = ctx.createRadialGradient(45, 45, 10, 62, 62, 80);
+
+			rgrad.addColorStop(0, "#A7DE0C");
+			rgrad.addColorStop(1, "rgb(1, 159, 98)");
+
+			ctx.fillStyle = rgrad;
+			ctx.arc(80, 80, 80, 0, Math.PI*2, true);
+			ctx.fill();
+				
+
+		}
+
+	</script>
+</head>
+<body>
+    <canvas id="c" width="300" height="350"></canvas>
+</body>
+</html>

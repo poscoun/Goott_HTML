@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>HTML5 + CSS3</title>
+	<style type="text/css">
+		#myDiv {
+			width: 200px;
+			height: 100px;
+			background-color: gray;
+			color: white;
+			border-radius: 30px;
+		}
+
+		#div1 {
+			background-color: gray;
+			width: 200px;
+			height: 100px;
+			border: 1px solid black;
+			border-top-right-radius: 30px;
+			border-bottom-left-radius: 30px;
+		}
+
+		#div2 {
+			background-color: gray;
+			width: 200px;
+			height: 200px;
+			border: 1px solid black;
+			-ms-border-radius: 50%;
+		}
+	</style>
+</head>
+<body>
+    <div id="myDiv">
+    	<p>
+    		인간의 진정한 모습은 술에 취했을 때 드러난다.
+
+			A man's true character comes out when he's drunk.
+    	</p>
+    </div>
+
+    <br>
+    <br>
+
+    <div id="div1">round1</div>
+
+    <br>
+    <br>
+
+    <div id="div2">round2</div>
+
+    <div id="browser">
+    	<p>
+    		CSS가 브라우저별로 부분적으로 다르게 구현될 수 있습니다.
+    		그러므로 필요하다면 CSS 프로퍼티 앞에 브라우저를 식별할 수 있는 접두사를 붙여서 사용해야 함.
+
+    		<ol>
+    			<li> -webkit- : 웹킷방식 브라우저용 (사파리, 크롬, ...) </li>
+    			<li> -moz-    : 게코방식 브라우저용 (모질라, 파이어폭스...)	 </li>	
+    			<li> -o-      : 오페라 브라우저 </li>
+    			<li> -ms-     : 마이크로 소프트 인터넷 익스플로러 </li>
+    		</ol>
+    	</p>
+    </div>
+</body>
+</html>

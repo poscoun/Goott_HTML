@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="utf-8">
+   <title>로또 구현</title>
+   <style type="text/css">
+      img{
+         width: 130px;
+      }
+   </style>
+   <script type="text/javascript">
+      function bigChance(){
+         // alert("click");
+
+         //1. 배열 선언
+         var rnd=new Array(6);
+
+         //2. 1부터 45까지의 번호 - 6개 생성
+         for(var i=0; i<rnd.length; i++){
+            // console.log(Math.floor(Math.random()*45+1));
+            rnd[i]=(Math.floor(Math.random()*45+1));
+            //3.중복되지 않게 하기
+            for(var j=0; j<i; j++){
+               if(rnd[i]==rnd[j]){
+                  i-=1;
+                  break;
+               }
+            }
+            // console.log(rnd[i]);
+         }
+         // console.log(rnd);
+         console.log("-----------------");
+         //4. 정렬하기
+         console.log("정렬전 : " + rnd);
+
+         // var temp = 0;
+         // for(var i=0;i<rnd.length;i++){
+         //    for(var j=i+1;j<rnd.length;j++){
+         //       if(rnd[i]>rnd[j]){
+         //          temp = rnd[i];
+         //          rnd[i]=rnd[j];
+         //          rnd[j] = temp;
+         //       }
+         //    }
+         // }       // 정렬알고리즘
+
+         rnd.sort(function (left, right){
+            return left -right;
+         });
+
+         console.log("정렬 후 : " + rnd);
+         //5. 이미지 소스 변경 => 브라우저 화면에 출력
+         // document.getElementById("img1").src
+         // ="../lotto_ball/ball"+rnd[0]+".png";
+         // document.getElementById("img2").src
+         // ="../lotto_ball/ball"+rnd[1]+".png";
+         // document.getElementById("img3").src
+         // ="../lotto_ball/ball"+rnd[2]+".png";
+         // document.getElementById("img4").src
+         // ="../lotto_ball/ball"+rnd[3]+".png";
+         // document.getElementById("img5").src
+         // ="../lotto_ball/ball"+rnd[4]+".png";
+         // document.getElementById("img6").src
+         // ="../lotto_ball/ball"+rnd[5]+".png";
+
+         var img = document.getElementsByTagName("img");
+         for(var i=0;i<rnd.length;i++){
+            img[i].src ="../lotto_ball/ball"+rnd[i]+".png";
+         }
+
+
+      }
+
+
+      
+   </script>
+</head>
+<body>
+   <img src="../lotto_ball/q.jpg" alt="물음표" id="img1">
+   <img src="../lotto_ball/q.jpg" alt="물음표" id="img2">
+   <img src="../lotto_ball/q.jpg" alt="물음표" id="img3">
+   <img src="../lotto_ball/q.jpg" alt="물음표" id="img4">
+   <img src="../lotto_ball/q.jpg" alt="물음표" id="img5">
+   <img src="../lotto_ball/q.jpg" alt="물음표" id="img6">
+   <br>
+   <input type="button" value="대박" id="btn" onclick="bigChance()">
+</body>
+</html>

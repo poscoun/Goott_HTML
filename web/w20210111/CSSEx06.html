@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="utf-8">
+   <title>간단한 로그인 폼</title>
+   <style type="text/css">
+      div{
+         /*border:2px solid red;*/
+         margin-left: 700px;
+      }
+      table,tr,th,td{
+         border: 1px solid black;
+         border-collapse: collapse;
+
+         width: 500px;
+         height: 100px
+      }
+      #myDiv{
+         background-color: pink;
+         width: 100px;
+         height: 100px;
+
+         padding: 50px 30px;
+         margin: 20px 30px 40px 50px;
+      }
+
+   </style>
+</head>
+<body>
+   <form action="#">
+      <div>
+         <table>
+            <tr>
+               <th>ID</th>
+               <td>
+                  <input type="text" name="id" id="">
+               </td>
+            </tr>
+            <tr>
+               <th>PW</th>
+               <td>
+                  <input type="text" name="pw" id="">
+               </td>
+               <tr>
+                  <td><input type="button" value="로그인"></td>
+                  <td><input type="reset" value="Reset"></td>
+               </tr>
+            </tr>               
+         </table>
+         
+      </div>
+   </form>
+
+   <br>
+   <hr>
+   <br>
+
+   <!-- 배경색을 pink, 너비100 높이100 -->
+   <div id="myDiv">
+      BOX2
+   </div>
+   
+</body>
+</html>

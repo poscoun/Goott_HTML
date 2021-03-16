@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="utf-8">
+   <title>scriptEx12</title>
+   <script type="text/javascript">
+
+      function cal(){
+         var n1 = document.getElementById("txt1");
+         var o = document.getElementById("oper");
+         var n2 = document.getElementById("txt2");
+
+         var num1 = n1.value;
+         var oper = o.value;
+         var num2 = n2.value;
+
+         var result = 0;
+
+         // if(oper=="+"){
+         //    result = parseInt(num1) + parseInt(num2);
+         // }
+
+         var msg = num1+oper+num2;
+         // console.log(msg);
+
+         var result = eval(msg);
+
+         var r = document.getElementById("result");
+         r.value = result;
+
+      }
+
+   </script>
+</head>
+<body>
+   <input type="text" name="" id="txt1">
+   <input type="text" name="" id="txt2">
+   <input type="text" name="" id="oper" size="5">
+   <input type="button" value="=" onclick="cal()">
+   <input type="text" name="" id="result"> 
+
+   
+</body>
+</html>

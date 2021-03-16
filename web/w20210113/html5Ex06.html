@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>input tag 유형들</title>
+</head>
+<body>
+
+	<form action="#">
+		<label for="mail">메일 주소</label><br>
+		<input type="text" name="email" id=""><br>
+		<input type="email" name="email2" id="" required>	<!--  type="email" : email 형식, required : 필수 입력 -->
+
+		<!-- required : 자바스크립트 또는 ajax로 유효성 검사 로직을 복잡하게 작성할 필요가 없음
+				 : 모바일에서 유용 -->
+
+		<input type="submit" value="전송">				<!-- => get방식 -->
+	</form>
+	
+
+</body>
+</html>

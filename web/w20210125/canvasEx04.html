@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="utf-8">
+   <title>베지에 곡선</title>
+   <style type="text/css">
+      #c{border: 1px solid black; width: 400px; height: 500px;}
+      </style>
+      <script type="text/javascript">
+         window.onload = function(){
+            var canvas = document.getElementById("c");
+
+            var ctx = canvas.getContext('2d');
+
+            ctx.beginPath();
+            ctx.moveTo(50,100);
+
+            // 한 개의 조절점 이용해서 배지에 곡선 (cp1x, cp2y, x, y)
+            ctx.quadraticCurveTo(100,50, 350, 100);
+
+            //두 개의 조절점 이용해서 베지에 곡선 
+            //(cp1x, cp1y, cp2x, cp2y, x, y)
+            ctx.quadraticCurveTo(90, 50, 310, 50, 350, 100);
+
+            ctx.stroke();
+
+
+
+         }
+      </script>
+</head>
+<body>
+   <canvas id="c"></canvas>
+</body>
+</html>

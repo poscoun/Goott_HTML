@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>canvasEx01</title>
+	<style type="text/css">
+		#c {width: 500px; height: 300px; border: 1px solid black;}
+	</style>
+	<script type="text/javascript">
+		window.onload = function(){
+			// alert("onload");
+
+			var canvas = document.getElementById("c");
+
+			var ctx = canvas.getContext('2d');
+
+			// console.dir(ctx);
+
+			if(ctx){
+				// alert("ctx ok");
+
+				// 사각형 그리기
+				ctx.fillStyle = "yellow";
+				ctx.fillRect(10, 10, 100, 100); 		// x, y, 너비, 높이
+
+				ctx.fillStyle = "rgb(255, 255, 0)";
+				ctx.fillRect(200, 10, 100, 100); 
+
+				ctx.fillStyle = "rgb(255, 0, 0, 0.5)";
+				ctx.fillRect(120, 10, 100, 100); 
+
+				ctx.clearRect(150, 10, 40, 40);		// 영역 지우기
+
+				ctx.strokeStyle = "black";
+				ctx.strokeRect(100, 100, 50, 50);
+
+			}else{
+				alert("브라우저별로 또는 브라우저 버전에 따라 차이가 있을 수 있습니다.")
+			}
+			
+		}
+	</script>
+</head>
+<body>
+    <canvas id="c"></canvas>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="utf-8">
+   <title>calculator</title>
+   <style type="text/css">
+      table {
+         width: 800px;
+         height: 300px;
+         margin: 0 auto;
+         text-align: center;
+      }
+
+      table,tr, td{
+         border: 1px solid red;
+      }
+
+      #result{
+         width: 500px;
+      }
+
+      input {
+         width: 80px;
+      }
+   </style>
+
+   <script type="text/javascript">
+      function inputData(x){   //자바스크립트 함수도 매개변수를 받을 수 있음
+         var result=document.getElementById("result");
+         result.value+=x;   //입력값을 지우지 않고 바로 붙여서 출력
+      }
+
+      function cal(){
+         var result=document.getElementById("result");
+         // console.log(result.value);
+         result.value=eval(result.value);
+      }
+
+      function clearData(){
+         var result=document.getElementById("result");
+         result.value="";
+      }
+   </script>
+</head>
+<body>
+   <table id="container">
+      <tr>
+         <td colspan="4">
+            <input type="text" name="" id="result">
+         </td>
+      </tr>
+      <tr>
+         <td><input type="button" value="7" id="btn7" onclick="inputData(7)" ></td>
+         <td><input type="button" value="8" id="btn8" onclick="inputData(8)" ></td>
+         <td><input type="button" value="9" id="btn7" onclick="inputData(9)" ></td>
+         <td><input type="button" value="+" id="btn7" onclick="inputData('+')" ></td>
+      </tr>
+      <tr>
+         <td><input type="button" value="4" id="btn7" onclick="inputData(4)" ></td>
+         <td><input type="button" value="5" id="btn7" onclick="inputData(5)" ></td>
+         <td><input type="button" value="6" id="btn7" onclick="inputData(6)" ></td>
+         <td><input type="button" value="-" id="btn7" onclick="inputData('-')" ></td>
+      </tr>
+      <tr>
+         <td><input type="button" value="1" id="btn7" onclick="inputData(1)" ></td>
+         <td><input type="button" value="2" id="btn7" onclick="inputData(2)" ></td>
+         <td><input type="button" value="3" id="btn7" onclick="inputData(3)" ></td>
+         <td><input type="button" value="*" id="btn7" onclick="inputData('*')" ></td>
+      </tr>
+      <tr>
+         <td><input type="button" value="0" id="btn7" onclick="inputData(0)" ></td>
+         <td><input type="button" value="00" id="btn7" onclick="inputData('00')" ></td>
+         <td><input type="button" value="=" id="btn7" onclick="cal()"></td>
+         <td><input type="button" value="/" id="btn7" onclick="inputData('/')" ></td>
+      </tr>
+      <tr>
+         <td colspan="4">
+            <input type="button" value="C" id="btnClear" onclick="clearData()">
+         </td>
+      </tr>
+   </table>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>객체</title>
+	<script type="text/javascript">
+		function getInfo() {
+			var txt = document.getElementById("txt");
+
+			console.log(txt);
+			console.dir(txt);
+		}
+
+		function getBtnInfo() {
+			var btn = document.getElementById("btn");
+
+			console.dir(btn);
+			btn.value = "왜 눌러~?"
+		}
+
+		function getImgInfo() {
+			var img = document.getElementById("simbo1");
+			console.dir(img);
+
+			img.width = 400;
+			img.height = 300;
+			img.src = "../Images/origami.gif";
+		}
+	</script>
+</head>
+<body>
+    <h2>자바스크립트 : 객체 기반 스크립트 언어</h2>
+    <h3>객체 : propert(속성) + 함수</h3>
+    <input type="" name="" id="txt" onfocus="getInfo()">
+    <input type="button" value="객체정보얻어오기" id="btn" onclick="getBtnInfo()">
+    <!-- 이미지 크기를 400, 300으로 수정해보세요 -->
+    <img src="../Images/simbo1.jpg" alt="설거지심보" id="simbo1" onclick="getImgInfo()">
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>window</title>
+	<script type="text/javascript">
+		
+		//console.dir(window);
+
+		var m = window.open("", "", "width=300, height=200");
+
+		m.moveTo(0, 0);
+
+		// 1초 단위로 특정 함수를 실행하기 
+		window.setInterval(function(){
+			m.moveBy(10, 10);
+		}, 1000);		// 밀리세컨드 단위
+		
+
+
+	</script>
+</head>
+<body>
+    
+</body>
+</html>		

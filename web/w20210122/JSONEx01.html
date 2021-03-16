@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="utf-8">
+   <title>JSONEx01</title>
+   <script type="text/javascript">
+      var person1 = {};
+
+      //객체에 property가 없어도 알아서 생성해 줌
+      person1.name = "봉준호";
+      person1.age = 50;
+      person1.job = "영화감독";
+      person1.gender = "남성";
+
+      // 변수가 같으면 덮어쓰지만 오타가 나면 속성으로 받아들여서 변수를 추가하므로 객체 생성시 유의
+      // person1.name = "박찬욱";
+      console.log(person1);
+
+      console.log("------------------------------");
+
+      var person2 = {};
+
+      person2.name = "유관순";
+      person2.age = 17;
+      person2.job = "학생";
+      person2.gender = "여성";
+
+      console.log(person2);
+
+      // 성인 여부 판별
+      function isAdult(obj){
+         var result;
+
+         if(obj.age >= 18){
+            result = "성인";
+         }else{
+            result = "미성년자";
+         }
+         console.log(obj.name + " 님은 " + result + " 입니다.");
+
+      }
+
+      isAdult(person1);
+      isAdult(person2);
+
+      console.log('--------------------');
+
+      var person3 = {
+         name : "홍길동",
+         age : 20,
+         job : "도적",
+         gender : "남성",
+         isAdult : function(){
+            var result;
+
+            if(this.age >= 18){
+               result = "성인";
+            }else{
+               result = "미성년자";
+            }
+
+            console.log(this.name + " 님은 " + result + " 입니다.");
+         }   
+      };
+
+      isAdult(person3);
+
+      person3.isAdult();
+
+   </script>
+</head>
+<body>
+   
+</body>
+</html>

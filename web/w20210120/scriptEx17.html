@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="utf-8">
+   <title>core</title>
+   <script type="text/javascript">
+      // 자바 배열 선언 : 자료형[] 변수 = new 자료형[x];
+
+      // 자바스크립트 배열
+      var a = new Array(3);      // 배열 선언과 동시에 크기 선언
+      var a1 = new Array();      // 배열 선언하고 크기 미지정
+      var a2 = new Array(45, 12, 2, 4, 44, 24);   // 배열에 값을 넣어서 선언
+      var a3 = [23, 34, 6, 2, 17, 33];         // 배열에 값을 넣어서 선언
+
+/*
+      console.log(a);
+      console.log(a1);
+      console.log(a2);
+      console.log(a3);
+*/
+   
+      a[0] = 1;
+      a[1] = 2;
+      a[2] = 3;
+      
+      // 반복문 출력
+      for(var i=0; i<3; i++){
+         console.log("a[" + i + "] : " + a[i] );
+      }
+
+      console.log("----------------------------");
+
+      console.dir(a);
+
+      console.log(a.reverse());
+
+      console.log("----------------------------");
+
+      var b = new Array(2);
+      // a 배열에서 0번째, 1번째 값을 b 배열에 담아보세요
+
+      // b[0] = a[0];
+      // b[1] = a[1];
+
+      //slice(n1, n2) : n1부터 n2 전까지 분리
+      b = a.slice(0,2);
+
+      console.log("a : " + a);
+      console.log("b : " + b);
+
+      console.log("----------------------------");
+      // concat : 붙이고 싶을 때 사용하는 함수
+      console.log(b.concat(a));
+
+      console.log("----------------------------");
+
+      // Object 선언
+      var p = new Object();
+      var p2 = {};
+
+      console.dir(p);
+      console.dir(p2);
+
+      console.log("----------------------------");
+
+      p.name = "홍길동";
+      p.age = 20;
+
+      console.log(p);
+
+   </script>
+</head>
+<body>
+   
+</body>
+</html>

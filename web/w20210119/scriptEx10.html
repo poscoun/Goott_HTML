@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="utf-8">
+   <title>scriptEx10</title>
+   <script type="text/javascript">
+      
+      function prt(){
+         //console.log("prt() start");
+
+         // id로 중복되지 않게 객체를 선택하여 텍스트필드에 사용자가 입력한 데이터를 가져오기
+
+         var txt = document.getElementById('txt1');
+
+         // 현재 txt는 객체
+         // - 객체 안의 내용을 가져오고 싶으면 value를 추출함
+         console.log(txt.value);
+
+         //객체 속성값을 변화시킬 수도 있음
+         txt.value = "어서오세요";
+      }
+
+
+   </script>
+</head>
+<body>
+   <input type="text" name="" id="txt1">
+   <input type="button" value="출력" onclick="prt()">
+</body>
+</html>

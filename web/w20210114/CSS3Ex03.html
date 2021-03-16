@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>shadow effect</title>
+	<style type="text/css">
+		
+		#ori {
+			margin-left: 30px;
+			/*box-shadow: 가로, 세로, 번지는 정도, 그림자 색상
+					  : 최소 3가지는 지정해주어야함;*/
+
+			box-shadow: 5px 3px 2px gray;
+		}
+
+		a #ori2:hover {
+			box-shadow: 1px 4px 3px black;
+		}
+
+	</style>
+</head>
+<body>
+    <img src="..\Images\origami.gif" alt="종이접기" id="ori">
+
+    <hr>
+    <br>
+    <div id="hover">
+    	<a href="#">
+    		<img src="..\Images\origami.gif" alt="종이접기" id="ori2">
+    	</a>
+    </div>
+</body>
+</html>

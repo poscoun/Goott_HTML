@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>Pseudo-class(가상 클래스)</title>
+	<style type="text/css">
+		ul{
+			width: 800px;	
+			height: 100px;
+			padding: 20px 0 0 20px;			
+		}
+		li{
+			list-style-type: none;
+			float: left;
+			margin-right: 30px;
+		}
+		a{
+			background-color: white;
+			color: #aa0000;
+			padding: 10px;
+			font-size: 25px;
+			font-weight: bold;
+			text-decoration: none;
+			transition: all 1s ease;
+		}
+		a:hover{
+			background-color: #d9d9d9;
+			color: #fff;
+		}
+		p:target{
+			border: 1px solid red;
+			background-color: yellow;
+			border-radius: 5px;
+			padding: 5px 8px;
+		}
+	</style>
+</head>
+<body>
+	<ui>
+		<li><a href="#today">오늘은</a></li>
+		<li><a href="#fri">금요일</a></li>
+		<li><a href="#next">내일은</a></li>
+		<li><a href="#wow">주말&연휴</a></li>
+	</ui>
+	<hr>
+	<p id="today">
+		가상 클래스 <br>
+		: 기본 선택자 외의 요소에 CSS 효과를 주고 싶을 때 사용 <br>
+		: 특정한 상태 말고 규칙에 따라 상태가 바뀌는 요소를 선택할 때 사용
+
+	</p>
+	<p id="fri">
+		기본문법 <br>
+		선택자 : pesudo-class{속성:값;};
+	</p>
+	<p id="next">
+		많이 사용되는 요소
+	</p>
+	<p id="wow">pseudo-class</p>
+
+	<table>
+		<tr>
+			<th>요소</th>
+			<th>설명</th>
+		</tr>
+		<tr>
+			<td>:link</td>
+			<td>링크변경</td>
+		</tr>
+		<tr>
+			<td>:visited</td>
+			<td>한번 이상 방문한 링크의 색상을  변경</td>
+		</tr>
+		<tr>
+			<td>:hover</td>
+			<td>마우스 커서가 링크 위에 올라갔을 때 변경</td>
+		</tr>
+		<tr>
+			<td>:active</td>
+			<td>활성화된 요소에 대한 속성 지칭</td>
+		</tr>
+		<tr>
+			<td>:focus</td>
+			<td>포커스를 받은 요소에 대한 속성 지정</td>
+			<tr>
+				<td>:frist-child</td>
+				<td>첫번째 자식에 대한 속성 지정</td>
+			</tr>
+			<tr>
+				<td>:lang</td>
+				<td>특정 language에 대한 속성 지정(다국적 홈페이지에 유용</td>
+			</tr>
+			<tr>
+				<td>:not</td>
+				<td>지정한 항복을 제외한 모든 항목을 선택</td>
+			</tr>
+			<tr>
+				<td>:target</td>
+				<td>앵커를 이용해서 웹 페이지 안에서 타깃이 되는 부분에 표시 및 속성 지정 기능</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+			</tr>
+		</tr>
+	</table>
+</body>
+</html>

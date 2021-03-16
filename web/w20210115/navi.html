@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="utf-8">
+   <title>navi bar</title>
+   <style type="text/css">
+      .navi{
+         list-style: none;
+         height: 40px;
+         padding: 0;
+         margin: 0;
+
+      }
+
+      .navi li{
+         float: left;
+         position: relative;
+         padding: 0;
+         line-height: 40px;
+         background-color: #bfff00;
+      }
+
+      .navi li a{
+         display: block;
+         text-decoration: none;
+         font-size: 14px;
+         padding: 5px 25px;
+         color: black;
+      }
+
+      .navi li a:hover{
+         color:white;
+      }
+
+      .navi li ul{
+         position: absolute;
+         left: 0;
+         width: 170px;
+         background-color: #66ff66;
+
+         list-style-type: none;
+         padding: 0;
+         margin: 0;
+
+         opacity: 0;
+
+      }
+
+      .navi li:hover ul{
+         opacity: 1;
+      }
+
+      /*접어 놓기*/
+      .navi li ul li{
+         float: none;
+         position: static;
+         height: 0;
+         line-height: 0;
+         background: none;
+      }
+
+      .navi li:hover ul li{
+         height: 30px;
+         line-height: 20px;
+         padding: 5px 0;
+      }
+
+      .navi li ul li:hover a{
+         background-color: #e64d00;
+         color: yellow;
+      }
+
+
+   </style>
+</head>
+<body>
+   <nav>
+      <ul class="navi">
+         <li><a href="#">HOME</a></li>
+         <li><a href="#">과정</a>
+            <ul>
+               <li><a href="#">DBMS</a></li>
+               <li><a href="#">JAVA</a></li>
+               <li><a href="#">HTML5</a></li>
+               <li><a href="#">CSS3</a></li>
+            </ul>
+          </li>
+          <li><a href="">커뮤니티</a>
+             <ul>
+                <li><a href="#">공지사항</a></li>
+                <li><a href="#">Q&A</a></li>
+                <li><a href="#">자주묻는질문</a></li>
+                <li><a href="#">자유게시판</a></li>
+             </ul>
+          </li>
+          <li><a href="#">출석체크</a></li>
+          
+      </ul>
+
+   </nav>   
+   
+</body>
+</html>

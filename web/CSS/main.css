@@ -1,0 +1,73 @@
+@charset "UTF-8";
+
+#container {
+	width: 900px;
+	margin: 0 auto;
+}
+
+#header{
+	background-color: #FF6699;
+	height: 130px;
+}
+
+#menu{
+	background-color: #FFFF99;
+
+}
+
+.button{
+	text-decoration: none; /* a 태그에 들어간 언더바 지워줌 */
+	text-align: center;
+	font-size: 14px;
+	font-family: "Nanum Gothic", "돋움", Consolas;
+
+	background-color: #FFFF00;
+	border: 1px solid #003333;
+	color: #b8Caee;
+	padding: 10px 20px;
+}
+
+/*마우스 대면*/
+.button:hover{
+	background-color: #FF66FF;
+}
+
+/*마우스 클릭*/
+.button:active{
+	background-color: red;
+	color: white;
+	position: relative;
+	top: -5px;
+}
+
+img{
+	width: 900px;
+
+}
+
+#leftSidebar{
+	background-color: #FF9966;
+	width:250px;
+	float: left;
+}
+
+#contents{
+	background-color: #99FFCC;
+	width: 400px;
+	float: left;
+}
+
+#rightSidebar{
+	background-color: #FF9966;
+	width: 250px;
+	float: left;
+
+}
+
+#footer{
+	background-color: #66FF00;
+	height: 400px;
+
+	/*float 영향을 없애기*/
+	clear: both;
+}

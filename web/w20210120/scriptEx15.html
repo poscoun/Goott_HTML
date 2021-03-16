@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>dom</title>
+	<script type="text/javascript">
+		function prt(){
+			var msg = document.getElementsByTagName('h1');
+			// console.log(msg);
+
+			// msg[0].innerHTML = "오늘은";
+			// msg[1].innerHTML = "수요일";
+
+			for(var i=0; i<msg.length; i++){
+				msg[i].innerHTML = "Hello JavaScript World";
+				msg[i].style.border = "1px solid black";
+				msg[i].style.color = "#ff0000";
+			}
+		}
+	</script>
+</head>
+<body>
+    <h1>hello</h1>
+    <h1>hello</h1>
+
+    <input type="button" value="click" onclick="prt()">
+</body>
+</html>

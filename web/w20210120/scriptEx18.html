@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>core</title>
+	<script type="text/javascript">
+		// 날짜 : Date
+		var now = new Date();
+
+		console.log(now);
+		console.dir(now);
+
+		console.log(now.getYear());				// 1920년 기준
+		console.dir(now.getFullYear());			// Y2K를 고려하여 만들어진 기준
+
+		// 년, 월, 일, 시, 분, 초 출력해보세요
+
+		var year = now.getFullYear();
+		var month = now.getMonth()+1;
+		var day = now.getDate();
+		var hour = now.getHours();
+		var min = now.getMinutes();
+		var sec = now.getSeconds();
+
+		console.log(year + " 년 " + month + " 월 " + day + " 일 " + hour + " 시 " + min + " 분 " + sec + " 초 ");
+
+		console.log("-------------------------------------------------------------------------------------");
+		// 숫자
+		var num1 = 217;
+		var num2 = new Number(217);
+
+		console.log(num1);
+		console.log(num2);
+
+		console.log(typeof(num1));
+		console.log(typeof(num2));
+
+		console.dir(num1);
+		console.dir(num2);
+
+		console.log("------------------------------------------------------------------------------------------");
+		var num3 = new Number(217.343423424);
+
+		console.log(num3.toFixed(1));
+		console.log(num3.toFixed(4));		// 고정 - 반올림
+
+		var num4 = 3.13124124312314;
+
+		console.log(num4.toFixed(3));
+
+		console.dir(Number.MAX_VALUE);
+
+		console.log("-----------------------------------------------------------------------------------------");
+
+		// 수학 : Math
+		console.log(Math);
+
+		console.log("원주율 : " + Math.PI);
+		console.log("절대값 : " + Math.abs(-9));
+		console.log("제곱근 : " + Math.sqrt(4));
+		console.log("소수점 절삭 : " + Math.floor(3.14));
+		console.log("랜덤값(0부터 1사이의 실수) : " + Math.random());
+	</script>
+</head>
+<body>
+    
+</body>
+</html>

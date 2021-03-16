@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>상태 저장, 복원</title>
+	<script type="text/javascript">
+		window.onload = function(){
+			var canvas = document.getElementById("c");
+
+			var ctx = canvas.getContext('2d');
+
+			ctx.fillStyle = "gray";
+			ctx.fillRect(10, 10, 50, 100);
+			ctx.save();		// 메모리에 저장
+			ctx.fillStyle = "cyan";
+			ctx.fillRect(60, 10, 50, 100);
+			ctx.save();		// 메모리에 저장
+			ctx.fillStyle = "black";
+			ctx.fillRect(110, 10, 50, 100);
+			ctx.restore();
+			ctx.fillRect(160, 10, 50, 100);
+			ctx.restore();
+			ctx.fillRect(210, 10, 50, 100);
+		}
+	</script>
+</head>
+<body>
+    <canvas id="c" width="500" height="300"></canvas>
+</body>
+</html>

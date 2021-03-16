@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="utf-8">
+   <title>게임만들기_1</title>
+   <style type="text/css">
+      canvas {background-color: #aaa;}
+   </style>
+   <script type="text/javascript">
+
+
+
+      // 이미지 반복위한 변수 
+      var count = 0;
+
+
+      // 배경이미지
+
+         var bgImg = new Image();
+         bgImg.src = "../game/back1.gif";
+
+         //캐릭터 이미지
+         var rabbit1 = new Image();
+         rabbit1.src = "../game/rabbit1.png";
+
+         var rabbit2 = new Image();
+         rabbit2.src = '../game/rabbit2.png';
+
+         var rabbit3 = new Image();
+         rabbit3.src = '../game/rabbit3.png';
+
+
+      window.onload = function(){
+         var canvas = document.getElementById("myCanvas")
+
+         ctx = canvas.getContext('2d');
+
+         // console.dir(ctx);
+
+         // drawImage(그릴객체, x, y, 너비, 높이)
+         
+         // ctx.drawImage(bgImg, 0, 0, 800, 600);
+         // ctx.drawImage(rabbit1,100,100,80,80);   
+
+         // drawScreen();
+         //1초에 한번씩 drawScreen을 호출 
+         window.setInterval(drawScreen, 10);
+
+      }//onload_function()end
+
+      function drawScreen(){
+
+         count++;
+
+         ctx.drawImage(bgImg, 0, 0, 800, 600);
+
+         if(count%3==0){
+            ctx.drawImage(rabbit1, 100, 100, 80, 80);
+         }else if(count%3==1){         
+         ctx.drawImage(rabbit2, 100, 100, 80, 80);         
+         }else if(count%3==2){
+         ctx.drawImage(rabbit3, 100, 100, 80, 80);
+         }else{
+         count =0;
+      }
+   }
+   </script>
+</head>
+<body>
+   <canvas id="myCanvas" width="800" height="600"></canvas>
+</body>
+</html>

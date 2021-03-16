@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="utf-8">
+   <title>브라우저 시간 표시 - 자동</title>
+   <script type="text/javascript">
+      function clock(){
+         // alert("clock");
+
+         var now = new Date();
+
+         var year = now.getFullYear();
+         var month = now.getMonth()+1;
+         var day = now.getDate();
+         var hour = now.getHours();
+         var min = now.getMinutes();
+         var sec = now.getSeconds();
+
+         // console.log(""+year + month + day + hour + min + sec);
+
+         var time = year + "년" + month + "월" + day + "일" + hour+ "시" + min + "분" + sec + "초";
+
+         document.getElementById('data').value = time;
+
+         // 자바스크립 주기적인 작업을 수행하는 함수
+         // window.setInterval : 일정한 시간 간격으로 작업을 수행
+
+         // window.setTimeout : 일정한 시간 후에 작업을 한 번 수행 - 보통 재귀적인 호출로 작업을 반족하는 형태  
+         //                   : 작업 사이의 간격을 일정하게 하는 형태 
+
+         //window.setTimeout(함수명, 실행시간);
+         window.setTimeout(clock, 1000);
+
+
+
+      }
+
+
+   </script>
+</head>
+<body onload="clock()">
+   <input type="text" name="" id="data" size="50">
+</body>
+</html>

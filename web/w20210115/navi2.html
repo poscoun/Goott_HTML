@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="utf-8">
+   <title>navi bar2</title>
+   <style type="text/css">
+      #wrapper{
+         width: 960px;
+         height: 40px;
+
+      }
+      ul.navi{
+         float: left;
+         width: 960px;
+         margin: 0;   
+         padding: 0;
+         list-style-type: none;
+         background-color: #e6ac00;
+         border-radius: 10px;
+
+      }
+
+      ul.navi li{
+         display: inline;
+      }
+      ul.navi li a{
+         float: left;
+         font: bold 14px "굴림";
+         line-height: 40px;
+         color: white;
+         text-decoration: none;
+         text-shadow: 1px 1px 1px #e0e0d1;
+         margin: 0;
+         padding: 0 30px;
+         background-color: #fff9933;
+         border-radius: 10px;
+      }
+      ul.navi li:hover > a{
+         background-color: black;
+      }
+      ul.navi ul{
+         display: none;
+      }
+      ul.navi li:hover > ul{
+         position: absolute;
+         display: block;
+         width: 920px;
+         height: 45px;
+         margin: 40px 0 0 0;
+         background-color: #cc3300;
+         border-radius: 10px;
+
+      }
+
+   </style>
+</head>
+<body>
+   <nav>
+      <div id="wrapper">
+      <ul class="navi">
+         <li><a href="#">HOME</a></li>
+         <li><a href="#">과정</a>
+             <ul>
+                 <li><a href="#">DBMS</a></li>
+                 <li><a href="#">JAVA</a></li>
+                 <li><a href="#">HTML5</a></li>
+                 <li><a href="#">CSS3</a></li>
+              </ul> 
+          </li>
+          <li>
+             <a href="#">커뮤니티</a>
+             <ul>
+                <li><a href="#">공지사항</a></li>
+                <li><a href="#">Q&A</a></li>
+                <li><a href="#">자주묻는질문</a></li>
+                <li><a href="#">자유게시판</a></li>
+             </ul>
+          </li>
+          <li><a href="#">출석체크</a></li>
+      </ul>
+      </div>
+   </nav> 
+   
+   
+</body>
+</html>

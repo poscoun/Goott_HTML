@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>border 속성</title>
+	<style type="text/css">
+		#color {
+			width: 300px;
+			height: 120px;
+			border-width: 20px;
+			border-style: solid;
+
+			/*border-top-color: red;
+			border-right-color: blue;*/
+
+			border-color: red blue green yellow;
+		}
+
+		.border {
+			border: solid black;
+			display: inline;
+			float: left;
+			margin: 30px;
+		}
+
+		#box1 {
+			width: 200px;
+			height: 200px;
+			border-width: 50px;
+			border-image: url(../Images/b-image.jpg) 50;
+
+		}
+
+/*		border-image : source || slice || repeat
+
+		> repeat
+		stretch : 영역을 채울만큼 이미지를 늘림
+		repeat  : 영역을 채울만큼 타일 형식으로 반복
+		round   : 영역을 채울만큼 타일 형식으로 반복, 마지막에 이미지가 잘리지 않도록 온전히 채움
+		space   : 영역을 채울만큼 타일 형식으로 반복, 마지막에 이미지가 잘릴 수 있음*/
+
+		#box2 {
+			width: 300px;
+			height: 400px;
+			border-width: 70px;
+			border-image: url(../Images/b-image.jpg) 70;
+
+		}
+
+		#resize {
+			width: 200px;
+			height: 100px;
+			padding: 5px;
+			border: 1px solid black;
+			clear: both;
+
+			overflow: hidden;
+
+			/*horizontal, vertical, both, none;*/
+			resize: both;
+
+		}
+	</style>
+</head>
+<body>
+    <div id="color"></div>
+    <div class="border" id="box1"></div>
+    <div class="border" id="box2"></div>
+
+    <div id="resize">
+    	<p>
+    		자유와 평등, 형편없는 원칙이다. 인류에게 하나밖에 없는 진정한 원칙은 정의이며 약자에 대한 정의는 보호와 친절이다.
+			Liberty, equality - bad principles! The only true principle for humanity is justice; and justice to the feeble is protection and kindness.
+    	</p>
+    </div>
+</body>
+</html>

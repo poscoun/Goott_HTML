@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>shadow effect</title>
+	<style type="text/css">
+		#p1 {
+			font-family: Dotum;
+			font-size: 80px;
+			color: white;
+		}
+
+		span {
+			/*text-shadow 속성은 box-shadow와 동일*/
+			text-shadow: 3px 2px 4px black;
+
+		}
+
+		#div2 {
+			background:#666;
+			font-family: Arial black;
+			font-size: 50px;
+
+		}
+
+		#text1 {
+			color: #000;
+			text-shadow: 0px 1px 1px #fff;
+		}
+
+		/*선명한 느낌의 글자
+		- 짙은 배경 + 더 짙은 글자색
+		- 그림자 흰색이나 밝은 회색 (이 외에 다른 색은 지양)
+		- 영어가 더 유용*/
+
+		/*유의 - shadow effect는 본문에 너무 많이 사용하면 지저분해 보임
+			   그러므로 제목이나 강조할 글자 정도에만 추가하여 사용하는 것이 바람직*/
+
+		#text2 {
+			color: #fff;
+			text-shadow: 0px 1px 1px #000;
+		}
+	</style>
+</head>
+<body>
+    <div id="div1">
+    	<p id="p1">
+    		<span>HTML5</span>
+    		<span>&</span>
+    		<span>CSS3</span>
+    	</p>
+    </div>
+
+    <div id="div2">
+    	<p id="text1">HTML5 & CSS3</p>
+    	<p id="text2">HTML5 & CSS3</p>
+    </div>
+
+</body>
+</html>

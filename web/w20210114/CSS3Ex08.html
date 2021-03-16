@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>background image</title>
+	<style type="text/css">
+		img {
+			border: 1px solid black;
+			width: 400px;
+			height: 300px;
+		}
+
+		div {
+			width: 400px;
+			height: 300px;
+		}
+
+		#bg1 {
+			border: 1px solid black;
+			background: url(../Images/bg.jpg) no-repeat;
+			background-size: 50% 50% /*div 크기의 50%로 자동 조정*/
+		}
+
+		#bg2 {
+			border: 1px solid black;
+			background: url(../Images/bg.jpg) no-repeat center;
+			background-size: cover;
+			/*cover : 이미지 크기 비율을 그대로 유지하면서 이미지가 들어갈 엘리먼트의 가로 또는 세로에 이미지를 맞춤 (큰 값에 맞춤);
+
+			  contain : 이미지 크기 비율을 그대로 유지하면서 원하는 영역에 전체 이미지가 들어가도록 가장 작은 크기로 이미지 스케일을 조정*/
+		}
+	</style>
+</head>
+<body>
+    <p>
+    	<img src="..\Images\bg.jpg" alt="backgorund_image">
+    </p>
+
+    <div id="bg1"></div>
+    <div id="bg2"></div>
+</body>
+</html>

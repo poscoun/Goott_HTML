@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>hw03</title>
+	<style type="text/css">
+		table {
+			border-color: red;
+			width: 500px;
+		}
+		tr{
+			text-align: center;
+		}
+		input[type=text] {
+			width: 300px;
+		}
+		input[type=button] {
+			width: 50px;
+		}
+	</style>
+
+	<script type="text/javascript">
+		var oper = "";
+
+		function go(x){
+			// alert(x);
+			var txt1 = document.getElementById("txt1");
+
+			var num = txt1.value;
+
+			if (!isNaN(x)) {
+				if (x === "0" | x === "00" && num === ""){
+					alert("0부터 올 수 없습니다.");
+
+				} else {
+					txt1.value = num + x;
+				}
+
+			} else {
+				if (x === "+") {
+					oper += num + "+"
+					txt1.value = "";
+				} else if (x === "-") {
+					oper += num + "-"
+					txt1.value = "";
+				} else if (x === "*") {
+					oper += num + "*"
+					txt1.value = "";
+				} else if (x === "/") {
+					oper += num + "/"
+					txt1.value = "";
+				} else if (x === "=") {
+					txt1.value = eval(oper+num);
+					oper = "";
+				} else {
+					oper = "";
+					txt1.value = "";
+				}
+				
+			}
+		}
+
+	</script>
+
+</head>
+<body>
+    <table border="1">
+    	<tr>
+    		<td colspan="4">
+    			<input type="text" name="" id="txt1">
+    		</td>  		
+    	</tr>
+    	<tr>
+    		<td>
+    			<input type="button" value="7" id="7" onclick="go(this.value)">
+    		</td>
+    		<td>
+    			<input type="button" value="8" id="8" onclick="go(this.value)">
+    		</td>
+    		<td>
+    			<input type="button" value="9" id="9" onclick="go(this.value)">
+    		</td>
+    		<td>
+    			<input type="button" value="+" id="+" onclick="go(this.value)">
+    		</td>
+    	</tr>
+    	<tr>
+    		<td>
+    			<input type="button" value="4" id="4" onclick="go(this.value)">
+    		</td>
+    		<td>
+    			<input type="button" value="5" id="5" onclick="go(this.value)">
+    		</td>
+    		<td>
+    			<input type="button" value="6" id="6" onclick="go(this.value)">
+    		</td>
+    		<td>
+    			<input type="button" value="-" id="-" onclick="go(this.value)">
+    		</td>
+    	</tr>
+    	<tr>
+    		<td>
+    			<input type="button" value="1" id="1" onclick="go(this.value)">
+    		</td>
+    		<td>
+    			<input type="button" value="2" id="2" onclick="go(this.value)">
+    		</td>
+    		<td>
+    			<input type="button" value="3" id="3" onclick="go(this.value)">
+    		</td>
+    		<td>
+    			<input type="button" value="*" id="*" onclick="go(this.value)">
+    		</td>
+    	</tr>
+    	<tr>
+    		<td>
+    			<input type="button" value="0" id="0" onclick="go(this.value)">
+    		</td>
+    		<td>
+    			<input type="button" value="00" id="00" onclick="go(this.value)">
+    		</td>
+    		<td>
+    			<input type="button" value="=" id="=" onclick="go(this.value)">
+    		</td>
+    		<td>
+    			<input type="button" value="/" id="/" onclick="go(this.value)">
+    		</td>
+    	</tr>
+    	<tr>
+    		<td colspan="4">
+    			<input type="button" value="C" id="C" onclick="go(this.value)">
+    		</td>
+    	</tr>
+    </table>
+</body>
+</html>

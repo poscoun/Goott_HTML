@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>원, 호</title>
+	<style type="text/css">
+		#c {border:1px solid black; width: 400px; height: 500px;}
+	</style>
+	<script type="text/javascript">
+		window.onload = function(){
+			var canvas = document.getElementById("c");
+
+			var ctx = canvas.getContext('2d');
+
+			// arc(x, y, 반지름, startAngle, anticlockwise)
+
+			// 각도는 라디안으로 인식
+
+			// 1라디안 : 180/PI			cf) 360도 : 2PI
+
+			// radian <==== degree
+
+			// radian <=== (Math.PI/180)*degree
+
+			ctx.beginPath();
+			ctx.arc(70, 70, 20, 0, (Math.PI/180)*60, true);
+			ctx.stroke();
+
+			ctx.beginPath();
+			ctx.arc(130, 110, 40, 0, Math.PI*2, true);
+			ctx.fillStyle = "red";
+			ctx.fill();
+			ctx.stroke();
+
+			ctx.beginPath();
+			ctx.arc(190,70,20, (Math.PI/180)*100,(Math.PI/180)*170,true);
+			ctx.stroke();
+
+
+		}
+	</script>
+</head>
+<body>
+    <canvas id="c"></canvas>
+</body>
+</html>

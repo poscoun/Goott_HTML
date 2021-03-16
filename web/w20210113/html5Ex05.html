@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>멀티미디어 요소</title>
+	<style type="text/css">
+		table, tr, td{
+			border: 1px solid black;
+			text-align: center;
+			border-collapse: collapse;
+		}
+	</style>
+</head>
+<body>
+	<!-- default가 자동 재생이 아님 -->
+	<!-- 브라우저에서 마우스 오른쪽 - 컨트롤 표시하면 동영상 재생 -->
+	
+	<!-- chrome인 경우 autoplay는 muted가 활성화 되어야 구동됨에 유의
+		<video src="../media/pengsu.mp4" type="video/mp4" autoplay="autoplay" muted="muted"></video> --> 
+
+	<!-- <video src="../media/pengsu.mp4" controls></video>  -->
+
+	<!-- 파일이 잘못된 경우 poster 띄움 (ex.엑스박스)
+		<video src="../media/" width="450" height="400" controls poster="../media/pengsu_img.jpg"></video>-->
+
+	<!-- <video src="../media/pengsu.mp4" width="450" height="400" controls poster="pengsu_img.jpg"></video> -->
+
+	<img src="../media/believer.jpg" alt="ImageDragons"><br><br>
+
+	<audio controls="controls">
+		<source src="../media/Imagine Dragons - Believer.mp3" type="audio/mpeg">
+	</audio>
+
+	<br><br>
+
+	<audio src="../media/Imagine Dragons - Believer.mp3" type="audio/mpeg" width="450" height="30" controls="controls"></audio>
+	
+
+	<br>
+	<hr>
+	<br>
+	<table>
+		<tr>
+			<td>속성</td>
+			<td>기능</td>
+		</tr>
+		<tr>
+			<td>src</td>
+			<td>동영상 파일의 경로를 지정</td>
+		</tr>
+		<tr>
+			<td>poster</td>
+			<td>동영상이 화면에 나타나지 않을 때 대신 표시할 그림을 지정</td>
+		</tr>
+		<tr>
+			<td>preload</td>
+			<td>동영상이 백그라운드에서 다운로드 되어 재생 단추를 클릭할 시 재생</td>
+		</tr>
+		<tr>
+			<td>autoplay</td>
+			<td>동영상 자동 재생</td>
+		</tr>
+		<tr>
+			<td>loop</td>
+			<td>반복재생횟수를 지정</td>
+		</tr>
+		<tr>
+			<td>controls</td>
+			<td>동영상 화면에 컨트롤 막대를 추가<br>
+				재생/일시정지 단추, 트랙바, 볼륨 조절기<br>
+				-형태는 브라우저마다 다를 수 있음
+			</td>
+		</tr>
+		<tr>
+			<td>type
+			</td>
+			<td>입력하지 않아도 되지만, 웹 브라우저가 파일을 내려받은 뒤에 	  재생 가능한 파일인지를 확인하게 되면 트래픽 낭비가 생김. 이를 방지하기 위해 사용함
+			</td>
+		</tr>
+		<tr>
+			<td>width</td>
+			<td>동영상 화면의 너비를 지정</td>
+		</tr>
+		<tr>
+			<td>height</td>
+			<td>동영상 화면의 높이를 지정</td>
+		</tr>
+
+	</table>
+	
+</body>
+</html>

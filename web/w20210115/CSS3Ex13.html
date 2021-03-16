@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>구조적 Pseudo-Class</title>
+	<style type="text/css">
+		table {
+			width: 800px;
+		}
+
+		table, tr, th, td {
+			border: 1px solid black;
+			border-collapse: collapse;
+		}
+
+		li {
+			list-style-type: none;
+			float: left;
+			margin-right: 30px;
+			font-size: 50px;
+			font-family: Arial;
+		}
+
+		/*CSS2*/
+		li:last-child:after {
+			content: "END";
+			display: block;
+		}
+
+		/*CSS3*/
+		li:nth-child(odd){
+			color: red;
+			font-weight: bold;
+		}
+
+		li:nth-child(2) {
+			color: green;
+			font-family: Comic Sans Ms;
+		}
+
+		li:nth-child(4n) {
+			color: blue;
+			background-color: yellow;
+		}
+		4, 8 번째 요소 글자색을 파란색, 배경색은 노란색으로 바꿔보세요
+
+
+	</style>
+</head>
+<body>
+	<h2>그조적 Pseudo-Class</h2>
+	<p>
+		여러 개가 나열되어 있는 요소 중에서 특정 부분에만 다른 스타일을 적용
+	</p>
+	<table>
+		<tr>
+			<th>:nth-child(n)</th>
+			<td>항목 중에서 n번째 자식을 선택 (참고 : 수식으로도 가능 ex) 3n-1)</td>
+		</tr>
+		<tr>
+			<th>:nth-last-chile(n)</th>
+			<td>끝부터 n번째 자식을 선택</td>
+		</tr>
+		<tr>
+			<th>:nth-of-child(n)</th>
+			<td>유형이 같은 n번째 자식을 선택</td>
+		</tr>
+		<tr>
+			<th>:nth-last-of-child(n)</th>
+			<td>끝부터 유형이 같은 n번째 자식을 선택</td>
+		</tr>
+		<tr>
+			<th>:nth-child(ood)</th>
+			<td>홀수번째 유형을 선택</td>
+		</tr>
+		<tr>
+			<th>:nth-child(even)</th>
+			<td>짝수번째 유형을 선택</td>
+		</tr>
+	</table>
+
+	<hr>
+	<p>
+		CSS2 부터 있던 구조적 Pseudo Class 
+	</p>
+	<table>
+		<tr>
+			<th>:root</th>
+			<td>문서의 root 선택 <!-- ex)html document => root? <html> --></td>
+		</tr>
+		<tr>
+			<th>:last-child</th>
+			<td>컨테이너 항목의 마지막 자식</td>
+		</tr>
+		<tr>
+			<th>:first-of-type</th>
+			<td>해당 유횽의 첫번째 항목을 선택</td>
+		</tr>
+		<tr>
+			<th>:last-of-type</th>
+			<td>해당 유형의 마지막 항목을 선택</td>
+		</tr>
+		<tr>
+			<th>:only-child</th>
+			<td>컨테이너 항목의 유일한 자식</td>
+		</tr>
+		<tr>
+			<th>:only-of-type</th>
+			<td>해당 유형을 가진 컨테이너 항목의 유일한 자식을 선택</td>
+		</tr>
+		<tr>
+			<th>:enpty</th>
+			<td>빈 항목을 선택 (주의. 어떤 텍스트도 들어있으면 안됨)</td>
+		</tr>
+	</table>
+	
+	<hr>
+
+	<ul>
+		<li>A</li>
+		<li>B</li>
+		<li>C</li>
+		<li>D</li>
+		<li>E</li>
+		<li>F</li>
+		<li>G</li>
+		<li>H</li>
+	</ul>
+
+</body>
+</html>

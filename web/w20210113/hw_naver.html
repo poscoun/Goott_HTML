@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>간단한 웹페이지 구성</title>
+		<link rel="stylesheet" type="text/css" href="..\css\main.css">
+</head>
+<body>
+	<!-- div#container>div#header>div#logo>img -->
+	<div id="container">
+		<div id="header">
+			<div id="logo"><img src="..\Images\naver.jpg" alt="네이버로고"></div>
+		</div>
+		<div id="menu">
+			<!-- a([hre"#"]*4[class"button"]) -->
+				<a href="#" class="button">뉴스</a>
+				<a href="#" class="button">메일</a>
+				<a href="#" class="button">지도</a>
+				<a href="#" class="button">로그인</a>
+			</div>
+	<!-- div#leftSidebar>h1+ul>li*4 -->
+		<div id="leftSidebar">
+			<h1>왼쪽사이드바1</h1>
+			<ul>
+				<li>광고1</li>
+				<li>광고2</li>
+				<li>광고3</li>
+				<li>광고4</li>
+			</ul>
+		</div>	
+	<!-- div#contents>h1+ul>li{메인기사$}*4 -->
+		<div id="contents">
+			<h1>본문기사</h1>
+			<ul>
+				<li>메인기사1</li>
+				<li>메인기사2</li>
+				<li>메인기사3</li>
+				<li>메인기사4</li>
+			</ul>
+		</div>
+
+	<!-- div#rightSidebar>h1{오른쪽사이드바2}+ul>li{쇼핑몰$}*4 -->
+		<div id="rightSidebar">
+			<h1>오른쪽사이드바2</h1>
+			<ul>
+				<li>쇼핑몰1</li>
+				<li>쇼핑몰2</li>
+				<li>쇼핑몰3</li>
+				<li>쇼핑몰4</li>
+			</ul>
+		</div>
+		<div id="footer">
+			<h1>웹 페이지 구성</h1>
+			<p>간단히 만들어본 웹 페이지</p>
+			<p>Creators &nbsp; 크리에이터 &nbsp; 스몰비즈니스</p>
+			<p>Partners &nbsp; 비즈니스·광고 &nbsp; 스토어 개설 &nbsp; 지역업체 등록 &nbsp; 엑스퍼트 등록</p>
+			<p>Developers &nbsp; 네이버 개발자 센터 &nbsp; 오픈 API &nbsp; 오픈소스 &nbsp; 네이버 D2 &nbsp; 네이버 D2SF &nbsp; 네이버 랩스</p>
+		</div>
+	</div>
+
+</body>
+</html>

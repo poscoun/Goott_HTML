@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="utf-8">
+   <title>JSONEx03</title>
+   <script type="text/javascript">
+      var students = [];
+
+      students.push({name : "김상효", java:90, html:90, css:90});
+      students.push({name : "김성수", java:80, html:80, css:90});
+      students.push({name : "김성희", java:100, html:90, css:90});
+      students.push({name : "나상원", java:100, html:70, css:90});
+      students.push({name : "류지연", java:80, html:65, css:70});
+      students.push({name : "문성준", java:75, html:80, css:50});
+      students.push({name : "박용천", java:52, html:60, css:50});
+      students.push({name : "송찬기", java:80, html:100, css:67});
+      students.push({name : "장유빈", java:95, html:100, css:40});
+
+      console.log(students);
+
+      //filter() : 필터링
+      //자바 성적이 90점이 넘는 학생들만 추출
+
+      // var result = students.filter(function(subject){
+      //    return subject.java >=90;
+
+      // });
+
+      //람다식(lambda)
+      var result = students.filter((subject) => subject.java >=90);
+
+
+      console.log(result);
+      console.log(result[0].name);
+      console.log("---------------------------------------------");
+      
+      //전 과목 평균이 80점이 넘는 학생들을 모두 조회하세요
+      // var avg = students.filter(function(subject){
+      //    return (subject.java + subject.html + subject.css)/3 >=80; 
+
+      // });
+      // console.log(avg);
+
+
+      var avg = students.filter((subject) =>(subject.java + subject.html + subject.css)/3 >=80 );
+
+      console.log(avg);
+
+      for(var i=0; i<avg.length;i++){
+         console.log(avg[i].name);
+      }
+
+
+
+
+
+   </script>
+</head>
+<body>
+   
+</body>
+</html>

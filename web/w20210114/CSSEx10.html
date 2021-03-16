@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>변형효과 - transform</title>
+	<style type="text/css">
+		img{
+			width: 350px;
+		}
+
+		/*변형효과 : transform
+				 - rotate(회전)
+				 - scale(확대/축소)
+				 - skew(왜곡)
+				 - translate(이동)*/
+
+		#tr1 {
+			transform: rotate(45deg);		/*degree/radian 모두 사용 가능*/
+		}
+
+		#tr2 {
+			width: 100px;
+
+			/*transform: scale(1.5, 1.5);*/
+			/*transform: scale(2, 1); 가로만 확대 = transform: scaleX(2);*/
+			transform: scale(2);
+		}
+
+		#tr3 {
+			transform: skew(10deg, 10deg);	/*/degree/radian 모두 사용 가능*/
+		}		 
+
+		#tr4 {
+			transform: translate(200px, 200px);		/*좌표*/
+		}
+	</style>
+</head>
+<body>
+	<!-- (img[src="../Images/simbo$.jpg"][id="tr$"])*3 -->
+    <img src="../Images/simbo1.jpg" alt="" id="tr1">
+    <img src="../Images/simbo2.jpg" alt="" id="tr2">
+    <img src="../Images/simbo3.jpg" alt="" id="tr3">
+
+    <br>
+    <br>
+    <div>
+    	<img src="../Images/origami.gif" alt="" id="tr4">
+    </div>
+</body>
+</html>

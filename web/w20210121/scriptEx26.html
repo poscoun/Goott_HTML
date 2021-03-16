@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>select-option</title>
+	<script type="text/javascript">
+		function selectedMenu(){
+			// alert("menu");
+
+			// console.dir(document.frm.menu);
+
+			var idx = document.frm.menu.selectedIndex;
+
+			// console.log(idx);
+
+			// option은 번호(index)로 return 해줌에 유의!
+			if(idx==1){
+				location.href = "https://www.starbucks.co.kr/index.do";
+			}else if(idx==2){
+				location.assign("https://www.baristapaulbassett.co.kr/Index.pb");
+			}else if(idx==3){
+				location.replace("https://www.twosome.co.kr:7009/main.asp");
+			}else if(idx==4){
+				location.open("https://www.hollys.co.kr/");
+			}
+		}
+
+	</script>
+</head>
+<body>
+    <h1>메뉴를 선택하세요</h1>
+    <form action="#" name="frm">
+    	<select name="menu" id="" onchange="selectedMenu()">
+    		<option value="-------">-------</option>
+    		<option value="">스타벅스</option>
+    		<option value="">폴바셋</option>
+    		<option value="">투썸플레이스</option>
+    		<option value="">할리스</option>
+
+    	</select>
+
+    </form>
+</body>
+</html>

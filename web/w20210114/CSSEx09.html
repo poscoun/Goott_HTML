@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>투명도 속성</title>
+	<style type="text/css">
+		.box {
+			width: 330px;
+			height: 200px;
+			background-image: url(../Images/origami.gif);
+		}
+
+		#text1 {
+			position: relative;
+			top: 30px;
+			background-color: #fff;
+			font-family: Arial black;
+			font-size: 30px;
+			font-weight: bold;
+			vertical-align: middle;
+
+		}
+
+		#text2 {
+			position: relative;
+			top: 30px;
+			background-color: #fff;
+			opacity: 0.4;				/*현재 opacaity가 배경색, 텍스트 모두에 적용된 상태*/
+			font-family: Arial black;
+			font-size: 30px;
+			font-weight: bold;
+			vertical-align: middle;
+		}
+
+		#text3 {
+			position: relative;
+			top: 30px;
+			background-color: rgba(255, 255, 255, 0.5);
+			font-family: Arial black;
+			font-size: 30px;
+			font-weight: bold;
+			vertical-align: middle;
+		}
+
+		#text4 {
+			position: relative;
+			top: 30px;
+			background-color: #fff;
+			font-family: Arial black;
+			font-size: 30px;
+			font-weight: bold;
+			color: rgba(0, 0, 0, 0.5);
+			vertical-align: middle;
+		}
+	</style>
+</head>
+<body>
+    <div class="box">
+    	<h1 id="text1">transparency</h1>
+    </div>
+    
+    <div class="box">
+    	<h1 id="text2">transparency</h1>
+    </div>
+    
+    <div class="box">
+    	<h1 id="text3">transparency</h1>
+    </div>
+    
+    <div class="box">
+    	<h1 id="text4">transparency</h1>
+    </div>
+    
+</body>
+</html>

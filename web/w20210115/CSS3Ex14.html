@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>색상</title>
+	<style type="text/css">
+		div {
+			width: 300px;
+			height: 40px;	
+		}
+
+		#c1 {
+			background-color: rgb(150, 20, 20);
+		}
+
+		#c2 {
+			background-color: rgb(250, 200, 23);
+		}
+
+		#c3	{
+			background-color: rgb(25, 50, 200);
+		}
+
+		#o1 {background-color: rgba(255, 70, 10, 1.0);}
+		#o2 {background-color: rgba(255, 70, 10, 0.8);}
+		#o3 {background-color: rgba(255, 70, 10, 0.6);}
+		#o4 {background-color: rgba(255, 70, 10, 0.4);}
+		#o5 {background-color: rgba(255, 70, 10, 0.2);}
+
+		p {color: white;}
+		#h {background-color: hsl(320, 100%, 25%);}
+		#s {background-color: hsl(320, 60%, 50%);}
+		#l {background-color: hsl(320, 100%, 80%);}
+
+		#a {background-color: hsla(140, 40%, 30%, 0.5);}
+	</style>
+</head>
+<body>
+   <h2>rgb</h2>
+   <div id="c1"></div>
+   <div id="c2"></div>
+   <div id="c3"></div>
+
+   <hr>
+   <h2>rgba (색상 + 투명도) </h2>
+   <div id="o1"></div>
+   <div id="o2"></div>
+   <div id="o3"></div>
+   <div id="o4"></div>
+   <div id="o5"></div>
+
+   <hr>
+   <h2>hsl</h2>
+   <p id="h">
+   		H(Hue0) : 색상 - 0과 360은 빨강, 120은 초록, 240은 파랑
+   </p>
+   <p id="s">
+   		S(Saturation) : 채도 - %로 표시 <br>
+   		아무것도 안섞은 상태에서 0%는 회색톤 <br>
+   		100% 순색
+   </p>
+   <p id="l">
+   		L(Lightness) : 밝기 - %로 표시 (0~100으로 밝아짐)
+   </p>
+
+   <hr>
+   <h2>hsla</h2>
+   <p id="a">
+   		hsl + 투명도 추가 가능
+   </p>
+
+
+</body>
+</html>

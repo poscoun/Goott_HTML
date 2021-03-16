@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>img_object</title>
+	<script type="text/javascript">
+		function changeImage(){
+			var img = document.getElementById("img1");
+
+			// console.dir(img);
+
+			img.width = (img.width*3);
+		}
+	</script>
+</head>
+<body>
+    <img src="../Images/domi.jpg" alt="" id="img1">
+    <br>
+    <input type="button" value="확대" id="btn1" onclick="changeImage()">
+</body>
+</html>

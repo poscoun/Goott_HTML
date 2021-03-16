@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>dom</title>
+	    <script type="text/javascript">
+    	
+    	function prt(){
+    		var input = document.getElementById("txt1");
+    		// console.log(input);
+    		// console.log(input.value);
+
+    		// document.write(input.value);
+    		var output = document.getElementById("txt2");
+    		output.innerHTML = input.value;
+    	}
+
+    </script>
+</head>
+<body>
+    <!-- 버튼을 클릭하면 textfield에 있는 글자를 추출하여 브라우저 화면에 출력해보세요
+    단. 버튼 및 textfield가 모두 유지되어야 합니다. -->
+
+    <input type="text" name="" id="txt1">			
+    <input type="button" value="click" onclick="prt()">
+
+    <div id="txt2">
+    	
+    </div>
+</body>
+</html>

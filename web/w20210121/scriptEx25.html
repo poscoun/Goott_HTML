@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="utf-8">
+   <title>radio type</title>
+   <script type="text/javascript">
+      function viweResult(){
+         //alert("click");
+         var m1 = document.getElementById("m1");
+         var m2 = document.getElementById("m2");
+         var m3 = document.getElementById("m3");
+         var m4 = document.getElementById("m4");
+         var m5 = document.getElementById("m5");
+
+         //console.dir(m1);
+
+         var img = document.getElementById("img");
+         var src = "";
+
+         if(m1.checked){
+            src = "../movie_images/movie_image1.jpg";
+         }else if(m2.checked){
+            src = "../movie_images/movie_image2.jpg";
+         }else if(m3.checked){
+            src = "../movie_images/movie_image3.jpg";
+         }else if(m4.checked){
+            src = "../movie_images/movie_image4.jpg";
+         }else if(m5.checked){
+            src = "../movie_images/movie_image5.jpg";
+         }
+
+         img.src = src;
+
+         console.log("-------------------------------------");
+         // id를 통해 dom을 만들지 않고 문서의 path로도 호출 가능
+         console.log(document.frm.movie[0].checked);
+
+
+
+
+
+      }
+
+   </script>
+</head>
+<body>
+	<form action="#" name="frm">
+	   	<input type="radio" name="movie" id="m1">아이엠히어
+	   	<input type="radio" name="movie" id="m2">원더우먼 1984
+	   	<input type="radio" name="movie" id="m3">화양연화
+	   	<input type="radio" name="movie" id="m4">빅풋 주니어2
+	   	<input type="radio" name="movie" id="m5">블라인드
+	   	<input type="button" value="결과보기" onclick="viweResult()">
+	   	<img src="" alt="" id="img">
+   </form>
+
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>그라데이션 - 선</title>
+	<script type="text/javascript">
+		window.onload = function(){
+			var canvas = document.getElementById("c");
+
+			var ctx = canvas.getContext('2d');
+											// x1, y1, x2, y2
+			var grad = ctx.createLinearGradient(0, 0 , 0, 200);
+
+			// addColorStop(position, color)
+
+			// 	- position : 그라디언트에서 색상의 위치를 상대적으로 표시
+			// 	(0.0 ~ 1.0) ==> 알아서 사이값 조정
+
+			grad.addColorStop(0, '#4d914d');
+			grad.addColorStop(0.5, '#fff');
+			grad.addColorStop(1, 'yellow');
+
+			ctx.fillStyle = grad;
+			ctx.fillRect(10, 10, 200, 200);
+		}
+
+	</script>
+</head>
+<body>
+    <canvas id="c" width="300" height="350"></canvas>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>JSONEx02</title>
+	<script type="text/javascript">
+		var object = {
+			name : "심사임당",
+			email : "simsimdang@korea.com"
+		}
+
+		console.log(object);		// object는 name/value 쌍들의 비순서화된 SET이다
+
+		document.write(object + "<br>");
+
+		//console.dir(JSON);
+
+		// Object -> json -> string
+
+		// JSON 방식으로 전송(해석) 할 수 있게 하는 객체 : JSON
+		var obj = JSON.stringify(object);			// 객체를 JSON 파일형태인 문자로 출력
+		document.write(obj + "<br>");
+
+		var change = JSON.parse(obj);			// 문자 JSON 파일을 Object 객체로 변경
+		console.log(change);
+		document.write(change);
+
+	</script>
+</head>
+<body>
+    
+</body>
+</html>

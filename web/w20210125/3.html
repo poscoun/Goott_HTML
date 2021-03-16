@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="utf-8">
+   <title>게임만들기_3</title>
+   <style type="text/css">
+      canvas {background-color: #aaa;}
+   </style>
+   <script type="text/javascript">
+
+      //배경 음악 객체
+      var bgMusic = new Audio("../game/bgMusic01.mp3");
+      //console.log(bgMusic);
+
+      // 이미지 반복위한 변수 
+      var count = 0;
+
+
+      // 배경이미지
+
+         var bgImg = new Image();
+         bgImg.src = "../game/back1.gif";
+
+         //캐릭터 이미지
+         var rabbit1 = new Image();
+         rabbit1.src = "../game/rabbit1.png";
+
+         var rabbit2 = new Image();
+         rabbit2.src = '../game/rabbit2.png';
+
+         var rabbit3 = new Image();
+         rabbit3.src = '../game/rabbit3.png';
+
+         //토끼 좌표를 변수 처리
+
+         var rabbitX = 100;
+         var rabbitY = 100;
+
+
+
+
+
+      window.onload = function(){
+         var canvas = document.getElementById("myCanvas")
+
+         ctx = canvas.getContext('2d');
+
+         //body 태그 객체 얻어오기
+         var body = document.body;
+
+         //console.dir(body);
+
+         //body.onkeydown = 함수명; => 키보드 입력이 들어오면 함수를 실행 
+         body.onkeydown = runRabbit;   // 단순실행이 아닐 경우에는 함수 호출시 ()없이 함수이름으로 호출해야함에 유의!!!
+
+
+         window.setInterval(drawScreen, 100);
+
+      }//onload_function()end
+
+      function drawScreen(){
+
+         count++;
+
+         ctx.drawImage(bgImg, 0, 0, 800, 600);
+
+         if(count%3==0){
+            ctx.drawImage(rabbit1, rabbitX, rabbitY, 80, 80);
+         }else if(count%3==1){         
+         ctx.drawImage(rabbit2, rabbitX, rabbitY, 80, 80);         
+         }else if(count%3==2){
+         ctx.drawImage(rabbit3, rabbitX, rabbitY, 80, 80);
+         }else{
+         count =0;
+      }
+   }//function drawScreen() end
+
+   function runRabbit(event){
+      //console.dir(event);
+
+      // console.log(event.key);
+      // console.log(event.keyCode);
+
+      if(event.key=='w') rabbitY -=5;
+      else if(event.key=='a') rabbitX -=5;
+      else if(event.key=='s') rabbitY +=5;
+      else if(event.key=='d') rabbitX +=5;
+
+
+   }//runRabbit()end 
+
+
+   function moveup(){
+      //다양한 동작을 더 추가하고 싶다
+      rabbitY -=10;
+   }
+   function startMusic(){
+      console.log("배경음악나오기");
+      bgMusic.play();
+   }
+   function stopMusic(){
+      console.log("배경음악끄기");
+      bgMusic.currentTime = 0;
+
+      bgMusic.pause(); //잠시 멈춤
+   }
+
+   // function moveUp(){
+   //    rabbitY -=10;
+   // }
+   // function moveLeft(){
+   //    rabbitX -=10;
+   // }
+   // function moveRight(){
+   //    rabbitX +=10;
+   // }
+   // function moveDown(){
+   //    rabbitY +=10;
+   // }
+
+   function moveRabbit(event){
+      if(event=='up') rabbitY -=10;
+      else if(event=='left') rabbitX -=10;
+      else if(event=='right') rabbitX +=10;
+      else if(event=='down') rabbitY +=10;
+   }
+
+
+
+
+</script>
+</head>
+<body>
+   <canvas id="myCanvas" width="800" height="600"></canvas>
+   <br>
+   <input type="button" value="musicOn" onclick="startMusic()">
+   <input type="button" value="musicOff" onclick="stopMusic()">
+   <br>   
+
+   <!-- 버튼을 클릭하여 토끼 객체를 움직여 보세요 -->
+   &nbsp;&nbsp;&nbsp;<input type="button" value="▲" onclick="moveRabbit('up')" ><br>   
+   <input type="button" value="◀" onclick="moveRabbit('left')">
+   <input type="button" value="▶" onclick="moveRabbit('right')"><br>   
+   &nbsp;&nbsp;&nbsp;<input type="button" value="▼" onclick="moveRabbit('down')">
+
+</body>
+</html>

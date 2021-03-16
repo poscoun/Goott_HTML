@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>dom</title>
+	<script type="text/javascript">
+		function prt(){
+			// console.log('click');
+
+			var msg = "";
+			msg += "<ul>"
+			msg += "<li>Hello</li>";
+			msg += "<li>JavaScript</li>";
+			msg += "<li>World</li>";
+			msg += "</ul>";
+
+			// document.write(msg);
+
+			// console.dir(document.body);
+
+			// document.body.innerHTML = msg;
+
+			var txt = document.getElementById("txt");
+			// console.dir(txt);
+			txt.innerHTML = msg;
+		}
+
+	</script>
+</head>
+<body>
+    <input type="button" value="click" onclick="prt()">
+
+    <did id="txt">
+    	<h1>wow</h1>
+    </did>
+</body>
+</html>

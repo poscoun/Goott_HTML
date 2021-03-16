@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>gradient effect</title>
+	<style type="text/css">
+		#grad1 {
+			width: 150px;
+			height: 150px;
+			border: 1px solid black;
+
+			/*CSS3를 지원하지 않는 브라우저 => 대체할 화면 코드를 작성 (권장)*/
+			/*background: #06f;*/
+			/*background: -webkit-linear-gradient(left, #ebe600, #ff80ff);*/
+			/*background: -ms-linear-gradient(bottom, #ebe600, #ff80ff);*/
+
+			background:linear-gradient(to bottom, #ebe600, #ff80ff)
+
+			/*시작위치 지정 : top - 위에서 시작하여 아래로 바뀜
+						   bottom - 아래에서 시작하여 위로 바뀜
+						   left
+						   right
+
+						   -----------------------------------
+						   권장사항(규칙) : to 키워드를 붙일 것
+							              ex) top => to bottom
+						   */
+		}
+
+		#grad2 {
+			width: 150px;
+			height: 150px;
+			border: 1px solid white;
+			background: linear-gradient(45deg, #ebe600, #ff80ff)
+			/*degree : 맨 윗부분 - 0 deg
+				   : 시계방향으로 회전하면서 90deg
+				   : 270deg => -90deg */
+		}
+	</style>
+</head>
+<body>
+    <h2>선형 그라데이션</h2>
+    <p>1. 시작위치를 지정</p>
+    <div id="grad1"></div>
+    <p>2. 각도를 지정</p>
+    <div id="grad2"></div>
+
+    <p>
+    	linear-gradient(각도 또는 위치[~로], 시작, 끝)
+    </p>
+</body>
+</html>

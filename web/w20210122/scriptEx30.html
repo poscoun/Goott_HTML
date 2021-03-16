@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="utf-8">
+   <title>배열 입출력</title>
+   <script type="text/javascript">
+      // 사용자가 데이터를 몇개 입력할지 모를 경우
+      var msg = [];
+
+      function saveData(){
+         var data = document.getElementById("txt1");
+
+         msg.push(data.value);
+         console.log(msg);
+         data.value = "";
+      }
+
+      function prtData(){
+         // console.log(msg.pop());      // pop:가장 마지막에 넣은 것부터 출력
+         for(var i=0; i<msg.length; i++){
+            console.log(msg[i]);
+         }
+      }
+
+
+   </script>
+</head>
+<body>
+   <input type="text" name="" id="txt1">
+   <input type="button" value="저장" onclick="saveData()">
+   <input type="button" value="출력" onclick="prtData()">
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>CSS 효과</title>
+	<style type="text/css">
+		table{
+			width: 80%;
+			text-align: center;
+			border: 1px solid black;
+			border-collapse: collapse;
+			margin: 8px auto;
+		}
+
+		th{
+			height: 40px;
+			font-size: 25px;
+			background-color: #CFFF24;
+			border: 1px solid black;
+		}
+
+		tr{
+			border: 1px solid black;
+			cursor: pointer;
+		}
+
+		tr:hover{
+			color: #fff;
+			background-color: #40FFFF;
+			font-weight: bold;
+		}
+
+		td{
+			border: 1px solid black;
+			height: 30px;
+		}
+
+		#email, #address{
+			width: 30%;
+		}
+
+		#name{
+			width: 20%;
+		}
+
+		#id, #pw{
+			widows: 10%;
+		}
+
+		.even{
+			background-color: #fff3fd;
+		}
+
+	</style>
+</head>
+<body>
+	<!-- table>tr>(th[id=""])*5 -->
+	<table>
+		<tr>
+			<th id="id">ID</th>
+			<th id="pw">PW</th>
+			<th id="name">NAME</th>
+			<th id="email">EMAIL</th>
+			<th id="address">ADDRESS</th>
+		</tr>
+
+		<tr>
+			<td>id1</td>
+			<td>pw1</td>
+			<td>아이언맨</td>
+			<td>ironman@iron.com</td>
+			<td>NEW YORK</td>
+		</tr>
+		<tr class="even">
+			<td>id2</td>
+			<td>pw2</td>
+			<td>토르</td>
+			<td>thoe@asgard.com</td>
+			<td>아스가르드</td>
+		</tr>
+		<tr>
+			<td>id3</td>
+			<td>pw3</td>
+			<td>헐크</td>
+			<td>hulk@gmail.com</td>
+			<td>USA</td>
+		</tr>
+		<tr>
+			<td>id4</td>
+			<td>pw4</td>
+			<td>블랙위도우</td>
+			<td>blackwidow@gmail.com</td>
+			<td>RUSSIA</td>
+		</tr>
+		<tr class="even">
+			<td>id5</td>
+			<td>pw5</td>
+			<td>캡틴아메리카</td>
+			<td>captain@usa.com</td>
+			<td>USA</td>
+		</tr>
+	</table>
+	
+</body>
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="utf-8">
+   <title>게임만들기_5</title>
+   <style type="text/css">
+      canvas{background-color: #aaa;}
+   </style>
+   <script type="text/javascript">
+
+      // 배경 음악 객체
+      var bgMusic = new Audio("../game/bgMusic01.mp3");
+      // console.dir(bgMusic);
+
+      // 총 배경음 객체 필요
+      var fireSound = new Audio("../game/GUNSHOT.WAV");
+
+      // 비명 배경음 객체 필요
+      var scream = new Audio("../game/scream/1.WAV");
+
+      // 이미지 반복 위한 변수
+      var count = 0;
+
+      // 배경이미지
+      var bgImg1 = new Image();
+      bgImg1.src = "../game/back1.gif";
+
+      var bgImg2 = new Image();
+      bgImg2.src = "../game/back1.gif";
+
+      // 배경 좌표
+      var bg1Y = 0;
+      var bg2Y = -600;
+      
+
+      // 캐릭터 이미지
+      var rabbit1 = new Image();
+      rabbit1.src = "../game/rabbit1.png";
+
+      var rabbit2 = new Image();
+      rabbit2.src = "../game/rabbit2.png";
+
+      var rabbit3 = new Image();
+      rabbit3.src = "../game/rabbit3.png";
+
+      // 토끼 좌표를 변수 처리
+      var rabbitX = 100;
+        var rabbitY = 100;
+
+        // 조준경 이미지 객체
+        var target = new Image();
+        target.src = "../game/snipe.png";
+
+        // 조준경 좌표
+        var targetX = 300;
+        var targetY = 200;
+
+        // 총알 흔적 이미지 객체
+        var holeImg = new Image();
+        holeImg.src = "../game/hole.png";
+
+        // 총알 흔적 좌표
+        var holeX = -300;
+        var holeY = -300;
+
+
+
+      var ctx;   // 전역 선언해서 어디서든 쓸 수 있도록 함
+      window.onload = function(){
+         var canvas = document.getElementById("myCanvas");
+
+         ctx = canvas.getContext('2d');
+
+         canvas.onmousemove = moveTarget;
+         canvas.onmousedown = fire;
+
+         // body 태그 객체 얻어오기
+         var body = document.body;
+
+         // console.dir(body);
+         // body.onkeydown = 함수명; => 키보드 입력이 들어오면 함수를 실행
+         body.onkeydown = runRabbit;   // 단순실행이 아닐 경우에는 함수 호출시 () 없이 함수 이름으로 호출해야함에 유의!
+
+         window.setInterval(drawScreen, 100);
+
+      } // onload_function() end
+
+      function drawScreen(){
+         bg1Y += 5;
+         bg2Y += 5;
+
+         if(bg1Y >= 600){
+            bg1Y = -600;
+            bg2Y = 0;
+         }
+
+         if(bg2Y >= 600){
+            bg2Y = -600;
+            bg1Y = 0;
+         }
+
+         count ++;
+
+         ctx.drawImage(bgImg1, 0, bg1Y, 800, 600);
+         ctx.drawImage(bgImg2, 0, bg2Y, 800, 600);
+
+         if(count%3==0){
+            ctx.drawImage(rabbit1, rabbitX, rabbitY, 80, 80);
+         }else if(count%3==1){
+            ctx.drawImage(rabbit2, rabbitX, rabbitY, 80, 80);
+         }else if(count%3==2){
+            ctx.drawImage(rabbit3, rabbitX, rabbitY, 80, 80);
+         }else{
+            count = 0;
+         }
+
+         ctx.drawImage(holeImg, holeX, holeY, 30, 30);
+         ctx.drawImage(target, targetX, targetY, 70, 70);
+
+      }// function drawScreen() end
+
+      function runRabbit(event){
+         // console.dir(event);
+
+         // console.log(event.key);
+         // console.log(event.keyCode);
+
+         if(event.key == 'w') rabbitY -= 5;
+         else if(event.key == 'a') rabbitX -= 5;
+         else if(event.key == 's') rabbitY += 5;
+         else if(event.key == 'd') rabbitX += 5;
+
+      }// runRabbit() end
+
+      function startMusic(){
+          // console.log("배경음악 나오기");
+          bgMusic.play();
+
+      }
+
+      function stopMusic(){
+         bgMusic.currentTime = 0;
+         bgMusic.pause(); // 잠시 멈춤
+      }
+
+      /*
+      function moveUp(){
+         rabbitY -= 10;
+      }
+
+      function moveLeft(){
+         rabbitX -= 10;
+      }
+
+      function moveRight(){
+         rabbitX += 10;
+      }
+
+      function moveDown(){
+         rabbitY += 10;
+      }
+      */
+
+      function moveRabbit(event){
+         if(event == 'up') rabbitY -= 10;
+         else if(event == 'left') rabbitX -= 10;
+         else if(event == 'right') rabbitX += 10;
+         else if(event == 'down') rabbitY += 10;
+      }
+
+      // 조준경 - 마우스 이벤트 처리
+      function moveTarget(event){
+         // console.dir(event);
+         // console.log("x : " + event.pageX + ", y : " + event.pageY);
+
+         targetX = event.pageX-35;
+         targetY = event.pageY-35;
+      }
+      
+      // 총알 관련 함수
+      function fire(evnet){
+         holeX = event.pageX-5;
+         holeY = event.pageY-5;
+
+         fireSound.currentTime = 0;
+         fireSound.play();
+
+         // 거의 총소리와 비명소리가 같이 납니다.
+         // 비명을 조금 더 늦게 나도록 처리
+
+         window.setTimeout(function(){
+            scream.currentTime = 0;
+            scream.play();
+         }, 550);
+         
+      }
+
+   </script>
+</head>
+<body>
+   <canvas id="myCanvas" width="800" height="600"></canvas>
+   <br>
+   <input type="button" value="musicOn" onclick="startMusic()">
+   <input type="button" value="musicOff" onclick="stopMusic()">
+   <br>
+
+   <!-- 버튼을 클릭하여 토끼 객체를 움직여보세요 (call by value) -->
+   &nbsp;&nbsp;&nbsp;<input type="button" value="▲" onclick="moveRabbit('up')"> <br>   
+   <input type="button" value="◀" onclick="moveRabbit('left')">
+   <input type="button" value="▶" onclick="moveRabbit('right')">   <br>
+   &nbsp;&nbsp;&nbsp;<input type="button" value="▼" onclick="moveRabbit('down')">
+
+</body>
+</html>

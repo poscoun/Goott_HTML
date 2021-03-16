@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>img_random</title>
+	<script type="text/javascript">
+		// 10개의 영화 포스터 중 1개를 랜덤하게 출력
+
+		//1. 랜덤함수 - 랜덤값(0부터 1사이의 실수)을 추출 ==> (1부터 10까자의 정수가 필요)
+		// console.log(Math.floor(Math.random()*10+1));
+
+		var rnd = (Math.floor(Math.random()*10+1))
+
+		//2. 브라우저에 img를 출력 : document.write() - tag 형태로 출력 가능
+		//3. img 속성 = 응용(변경)
+		var img = "<img src='../movie_images/movie_image"+rnd+".jpg' />";
+
+		document.write(img);
+
+	</script>
+</head>
+<body>
+    
+
+
+</body>
+</html>
